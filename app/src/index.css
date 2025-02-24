@@ -1,0 +1,24 @@
+
+:root {
+  /*Fonts Sizes*/
+  --very-small-font-size: .75rem;
+  --small-font-size: 1rem;
+  --medium-font-size: 1.25rem;
+  --mlarge-font-size: 3rem;
+  --large-font-size: 20.625rem;
+
+  /*Fonts Weights*/
+  --regular-weight: 300;
+  --medium-weight: 500;
+
+  /*Colors*/
+  --Yellow: hsl(69, 100%, 50%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
