@@ -1,0 +1,55 @@
+.container-headerbackground {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.header-bg {
+  position:absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.bg-txt {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-txt {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.btns-containers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bar {
+  position: fixed;
+  left:2rem;
+}
+
+.menu-bar, .queer-bar, .store-bar {
+  background: transparent;
+  border: none;
+  padding-top: 3.5rem;
+  
+}
+
+.right-menu-bar {
+  display: flex;
+  gap: 0.5rem;
+  position: fixed;
+  right:2rem
+
+}

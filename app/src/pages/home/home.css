@@ -1,0 +1,13 @@
+.home-container {
+  width: 100%;
+}
+
+
+.header-bg {
+  position:absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}

@@ -1,10 +1,16 @@
 import { Layout } from "../../layout/Layout.jsx"
 
+import './home.css'
+
 const Home = () => { 
   return (
+    <>
     <Layout>
-      <h1>Soy el Home</h1>
+      <div className="home-container">
+            <h1>Hola estoy en home</h1>
+      </div>
     </Layout>
+    </>
 )
 }
 

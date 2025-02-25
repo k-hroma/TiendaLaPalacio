@@ -1,6 +1,6 @@
 import { Header } from "../components/header/Header.jsx"
 import { Footer } from '../components/footer/Footer.jsx'
-
+import './layout.css'
 const Layout = ({children}) => { 
   return (
     <>
@@ -8,8 +8,7 @@ const Layout = ({children}) => {
         <Header/>
       </header>
       <main>
-        {/* Renderizar contenido dinámico */}
-        <h1>{ children }</h1>
+        { children }
       </main>
       <footer>
         <Footer/>
