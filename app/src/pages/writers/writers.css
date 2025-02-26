@@ -1,0 +1,63 @@
+.writers-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.writers-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--beige);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.txt-writers-header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.txt-writers-container {
+display: flex;
+flex-direction: column;
+width: 100%;
+padding-left: 2rem;
+}
+
+.banner-container {
+  display: flex;
+  width: 100%;
+}
+
+.banner-container img {
+  width: 100%;
+}
+
+.txt-writers, .link-writers {
+  color: var(--ligth-brown);
+  font-family: 'Neue Montreal Medium';
+  font-size: var(--very-small-font-size);
+}
+
+.txt-writers-container p {
+  color: var(--pink);
+  font-family: 'Neue Montreal Regular';
+  font-size: var(--super-large-font-size);
+}
+
+.txt-writers-container p:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.txt-writers-container span {
+  color: var(--orange);
+  font-size: 1rem;
+  font-family: 'PPEditorialNew';
+  margin-right: 1rem ;
+}

@@ -87,4 +87,6 @@ export { Layout };
 
 ### Writers Page
 
+- a futuro los nombres direccionaran a base de datos de escritorxs
+
 ### Contact Page

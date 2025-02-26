@@ -4,12 +4,7 @@ import { Router } from './router/Router.jsx'
 
 const App = () => {
  
-
-  return (
-    <>
-      <Router />
-    </>
-  );
+  return ( <Router /> );
 };
 
 export { App } 
