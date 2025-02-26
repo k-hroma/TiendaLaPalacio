@@ -33,3 +33,8 @@
   font-family: 'Neue Montreal Thin Italic';
   src: url('../assets/fonts2/PPNeueMontreal-Italic.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'PPEditorialNew';
+  src: url('../assets/editorial-new-font-family/PPEditorialNew-Ultralight.woff2') format('woff2');
+}

@@ -1,4 +1,5 @@
 import './item-book.css'
+import { useState } from 'react';
 
 const ItemBook = ({ index, itemSrc, itemAlt, title, author }) => { 
   const bgColors = [
@@ -27,10 +28,20 @@ const ItemBook = ({ index, itemSrc, itemAlt, title, author }) => {
 
   const bgBorder = bgBorders[index % bgBorders.length];
 
+  const [hover, setHover] = useState(false)
+  
+  const handleMouseOver = () => { 
+    setHover(true)
+  }
+
+  const handleMouseOut = () => {
+    setHover(false)
+  }
+
   return (
     <>
-    <div className="item-container">
-      <div style={{ backgroundColor: bgColor, border: `10px solid ${bgBorder}` }} className="cover-container">
+      <div className="item-container">
+        <div style={hover ? { backgroundColor: bgColor, border: "10px solid #FF76DC" } : { backgroundColor: bgColor, border: `10px solid ${bgBorder}` }  } className={"cover-container"} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
         <img src={itemSrc} alt={itemAlt} />
       </div>
       <div className='item-info-container'>

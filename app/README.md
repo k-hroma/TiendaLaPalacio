@@ -40,6 +40,16 @@ export { Router };
 - En el componente Layout establezco la estructura base de la página html: header|main|footer
 - El Header y el Footer son componentes reutilizables
 
+### Header
+
+- El componente Header está conformado por una imagen de fondo, una barra en continuo movimiento y un navBar desplegable y fixed.
+
+### NavBar
+
+- Tiene todos los Links a las distintintas páginas. Las rutas se establecieron en el componente Router.
+
+### Footer
+
 ```jsx
 import { Header } from "../components/header/Header.jsx";
 import { Footer } from "../components/footer/Footer.jsx";
@@ -62,3 +72,19 @@ const Layout = ({ children }) => {
 };
 export { Layout };
 ```
+
+### Item Book
+
+- defino la estructura de cada item que estará conformado con información de la api de libros
+- cada item ocupara un lugar en la grilla creada en el Home
+
+### Home Page
+
+- realizo el fetch de datos
+- el componente Home se inyecta en la estructura ppal del Layout en la sección main
+
+### Store Page
+
+### Writers Page
+
+### Contact Page

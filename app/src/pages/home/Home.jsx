@@ -11,8 +11,9 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  // iniciar fetch 
-  useEffect(() => {
+  //fetch de datos
+  const handleFetch = () => { 
+    
     fetch('https://openlibrary.org/search.json?q=queer&limit=8')
       .then((response) => response.json())
       .then((data) => {
@@ -23,6 +24,10 @@ const Home = () => {
       console.log('Error fetching books', error);
       setLoading(false);
     });
+  }
+  // iniciar fetch 
+  useEffect(() => {
+    handleFetch()
 }, []);
   
   return (
