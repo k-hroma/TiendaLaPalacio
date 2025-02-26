@@ -1,13 +1,40 @@
 .home-container {
   width: 100%;
+  background-color: #E2E2E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.header-bg {
-  position:absolute;
+.txt-used-container {
   width: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:0 2rem ;
+  padding-top: 3.75rem;
+  padding-bottom: 1.5rem;
+
+}
+
+.txt-used {
+  color: var(--brown);
+  font-size: var(--very-small-font-size);
+  font-weight: var(--regular-weight);
+  line-height: 130%;
+
+}
+
+.link-used {
+  color: var(--pink);
+  font-size: var(--very-small-font-size);
+  font-weight: var(--regular-weight);
+  line-height: 130%;
+
+}
+
+.loading-message {
+  padding: 2rem;
+  color: var(--pink);
 }

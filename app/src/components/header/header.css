@@ -12,21 +12,30 @@
   object-fit: cover;
   z-index: -1;
 }
-
-.bg-txt {
-  position:fixed;
+.moving-container {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
+  width: 300%; 
+  display: flex;
+  animation: move 50s linear infinite;
+  will-change: transform;
 }
 
-.nav-txt {
-  position:fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
+.bg-txt {
+  width: 33.333%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-66.666%);
+  }
+  100% {
+    transform: translateX(0); /* Mueve 2/3 del contenedor */
+  }
 }
 
 .btns-containers {
@@ -34,16 +43,10 @@
   justify-content: space-between;
 }
 
-.menu-bar {
-  position: fixed;
-  left:2rem;
-}
-
 .menu-bar, .queer-bar, .store-bar {
   background: transparent;
   border: none;
   padding-top: 3.5rem;
-  
 }
 
 .right-menu-bar {
@@ -53,3 +56,55 @@
   right:2rem
 
 }
+.left-menu-bar {
+  position: fixed;
+  left:2rem;
+}
+
+.menu-navBar {
+  position: fixed;
+  z-index: 1;
+  width: 33%;
+  height: 100vh;
+  background-color: var(--brown);
+}
+
+.open-bar {
+  padding-left: 2rem;
+  background-color: transparent;
+  border: none;
+  padding-top: 3.5rem;
+  z-index: 1;
+
+}
+.links-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.sub-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-menu-open {
+  color: var(--orange);
+  text-decoration: none;
+  font-family: 'Neue Montreal Regular';
+  font-size: var(--super-large-font-size)
+}
+
+.links-menu-open:hover, .links-sub-menu-open:hover {
+  color: var(--pink);
+
+}
+
+.links-sub-menu-open {
+  color: var(--orange) ;
+  text-decoration: none;
+  font-family: 'Neue Montreal Medium';
+  font-size: var(--very-small-font-size);
+}
+
