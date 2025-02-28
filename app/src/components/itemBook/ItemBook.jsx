@@ -1,7 +1,9 @@
+
 import './item-book.css'
 import { useState } from 'react';
 
 const ItemBook = ({ index, itemSrc, itemAlt, title, author }) => { 
+
   const bgColors = [
     '#CDB0EA', 
     '#383838',
@@ -41,7 +43,7 @@ const ItemBook = ({ index, itemSrc, itemAlt, title, author }) => {
   return (
     <>
       <div className="item-container">
-        <div style={hover ? { backgroundColor: bgColor, border: "10px solid #FF76DC" } : { backgroundColor: bgColor, border: `10px solid ${bgBorder}` }  } className={"cover-container"} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+        <div style={hover ? { backgroundColor: bgColor, border: "10px solid #FF76DC" } : { backgroundColor: bgColor, border: `10px solid ${bgBorder}` }} className={"cover-container"} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
         <img src={itemSrc} alt={itemAlt} />
       </div>
       <div className='item-info-container'>

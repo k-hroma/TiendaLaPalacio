@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import { ItemBook } from '../../components/itemBook/ItemBook.jsx';
 import defaultImg from '../../assets/home/default-cover-book.png'
 import './home.css'
+import { useImageLoader } from '../../hooks/useImageLoader';
+import { LoadingComp } from '../../components/loading/Loading.jsx';
 
 const Home = () => {
   
   // crear el estado inicial del array de books
   const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  
+
   //fetch de datos
   const handleFetch = () => { 
     
@@ -18,28 +19,30 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => {
         setBooks(data.docs);
-        setLoading(false);
   })
     .catch((error) => {
       console.log('Error fetching books', error);
-      setLoading(false);
     });
   }
   // iniciar fetch 
   useEffect(() => {
     handleFetch()
-}, []);
+  }, []);
+  
+  const coverBooks = books.map(book => 
+    book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : defaultImg
+  );
+  const isLoading = useImageLoader([coverBooks])
   
   return (
     <Layout>
-      <div className="home-container">
-        <div className="txt-used-container">
-          <span className="txt-used">Usados</span>
-          <Link className="link-used" to='/store'>Ver más usados +</Link>
-        </div>
-        {loading ? (
-          <div className="loading-message"><p>LOADING...</p></div>
-        ) : (
+      {isLoading ? (<LoadingComp />)
+        : (
+        <section className="home-container">
+          <div className="txt-used-container">
+            <span className="txt-used">Usados</span>
+            <Link className="link-used" to='/store'>Ver más usados +</Link>
+          </div>
           <div className="grid-container">
             {books && books.map((book, index) => (
               <ItemBook
@@ -51,8 +54,9 @@ const Home = () => {
                 author={book.author_name?.[0] || "Autor desconocido"}
               />
             ))}
-          </div>)}
-      </div>
+          </div>
+        </section>
+      )}
     </Layout>
   );
 };

@@ -85,8 +85,58 @@ export { Layout };
 
 ### Store Page
 
+- realizo el fetch de datos
+- el componente Store se inyecta en la estructura ppal del Layout en la sección main
+
 ### Writers Page
 
 - a futuro los nombres direccionaran a base de datos de escritorxs
+- el componente writers se inyecta en la estructura ppal del Layout en la sección main
 
 ### Contact Page
+
+- incluye formulario, conersion de datos inresado a formato json y mosatrdos en un alert
+- el componente contact se inyecta en la estructura ppal del Layout en la sección main
+
+### Utils/preloadImages
+
+- módulo de pre-carga centralizado para utilizar en los componentes que están en todas las páginas: header y footer en este caso.
+
+### hooks/useImageLoader
+
+- para que el usuario no vea imágenes rotas o a medio cargar
+
+```
+// useImageLoader.js
+import { useState, useEffect } from 'react';
+
+const useImageLoader = (imageUrls) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const promises = imageUrls.map((url) =>
+          new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = resolve;
+            img.onerror = reject;
+          })
+        );
+        await Promise.all(promises);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error cargando imágenes:", error);
+        setIsLoading(false);
+      }
+    };
+
+    loadImages();
+  }, [imageUrls]);
+
+  return isLoading;
+};
+
+export default useImageLoader;
+```

@@ -10,7 +10,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   place-content: center;
-  justify-items: center;
+  justify-content: center;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 }

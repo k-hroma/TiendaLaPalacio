@@ -1,14 +1,12 @@
 .container-headerbackground {
-  position: relative;
+  display: flex;
   width: 100%;
-  height: auto;
 }
 
 .bg-img-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-height: 100vh;
 }
 
 .header-bg {
@@ -22,7 +20,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   width: 300%; 
   display: flex;
   animation: move 50s linear infinite;
@@ -48,11 +46,12 @@
 
 .btns-containers {
   position: fixed;
+  flex-direction: column;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
-  justify-content: space-between;
+
 }
 
 .menu-bar, .queer-bar, .store-bar {
@@ -69,6 +68,7 @@
   right:2rem
 
 }
+
 .left-menu-bar {
   position: fixed;
   left:2rem;
@@ -77,22 +77,27 @@
 /* Open NavBar */
 
 .menu-navBar {
-  position: fixed;
-  z-index: 1;
-  width: 33%;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: left;
   background-color: var(--brown);
+  padding-right: 2rem;
+  padding-bottom: 4.1rem;
 }
 
 .open-bar {
+  display: flex;
+  flex-direction: column;
   padding-left: 2rem;
   background-color: transparent;
   border: none;
   padding-top: 3.5rem;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
 
 }
+
 .links-container {
   display: flex;
   flex-direction: column;
@@ -114,7 +119,6 @@
 
 .links-menu-open:hover, .links-sub-menu-open:hover {
   color: var(--pink);
-
 }
 
 .links-sub-menu-open {
@@ -132,31 +136,31 @@
   position: fixed;
   top: 0;
   right:0;
-  z-index: 1;
-  width: 68%;
-  height: 100vh;
+  z-index: 3;
   background-color: var(--orange);
   padding-left: 1.5rem;
+  padding-right:5.125rem ;
+  padding-bottom: 12.2rem;
 }
 
 .queer-txt {
+  display: flex;
   color: white;
   white-space: pre-line;
   font-family: 'Neue Montreal Regular';
   font-size: var(--large-font-size);
-
 }
 
 .queer-open-bar {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   justify-content: space-between;
   padding-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 3.875rem;
 }
 
-.queer-open-bar img {
+.queer-open-bar img, .word-close {
   cursor: pointer;
 }
 
@@ -166,3 +170,4 @@
   font-size: var(--very-small-font-size);
   line-height: 130%;
 }
+

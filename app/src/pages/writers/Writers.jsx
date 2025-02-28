@@ -6,8 +6,8 @@ import './writers.css'
 const Writers = () => { 
   return (
     <Layout>
-      <article className="writers-section">
-        <section className="writers-container">
+      <section className="writers-section">
+        <div className="writers-container">
           <div className="txt-writers-header-container">
             <p className="txt-writers">Escriotres recomendados</p>
             <Link className="link-writers" to='/'>Ver más escritorxs +</Link>
@@ -23,12 +23,12 @@ const Writers = () => {
             <p>Alejandra Pizarnik<span>Poesía</span></p>
             <p>Rosario Bléfari<span>Literatura</span></p>
           </div>
-        </section>
+        </div>
         <section className="banner-container">
           <img src={ bannerwriters } alt="banner-writers" />
 
         </section>
-      </article>
+      </section>
     </Layout>
 )
 }
