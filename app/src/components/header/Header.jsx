@@ -9,6 +9,7 @@ import storebar from '../../assets/header/menu-icons/menu-store.png'
 import menunavbar from '../../assets/header/menu-icons/menu-open.png'
 import queeropen from '../../assets/header/menu-icons/menu queer.png'
 
+
 const Header = () => { 
   const [open, setOpen] = useState(false);
   const [openQueer, setOpenQueer] = useState(false);
@@ -77,14 +78,19 @@ const Header = () => {
                       {"somos personas queer,\nleemos libros queer, y también nos\nguiamos por lo queer en un sentido\nmás amplio: celebramos otras formas\nde pensar y desafiamos las normas\npatriarcales, tradicionales, machistas\ny hegemónicas."}
                     </p>
                   </div>}
-                <button onClick={handleClickQueerOpen} className='queer-bar'>
-                  <img src={queerbar} alt="queer-icon" width="25" height="22" />
-                </button>
-                <button className='store-bar'>
-                  <Link to='/store'>
-                    <img src={storebar} alt="store-icon" width="25" height="22" />
+                  <button onClick={handleClickQueerOpen} className='queer-bar'>
+                    <img src={queerbar} alt="queer-icon" width="25" height="22" />
+                  </button>
+                  <button className='store-bar'>
+                    <Link to='/store'>
+                      <img src={storebar} alt="store-icon" width="25" height="22" />
+                    </Link>
+                  </button>
+                  <button className='store-bar'>
+                  <Link to='/admin'>
+                <box-icon name='user' color='brown' style={{ width: "25px", height: "30px" }}></box-icon>
                   </Link>
-                </button>
+                  </button>
               </div>
             </div>
           </section>
